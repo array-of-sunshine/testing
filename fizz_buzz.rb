@@ -55,3 +55,25 @@ RSpec.describe FizzBuzz do
 
   end
 end
+
+
+# inputs number of cents
+# output fewest # of coins
+
+# 50 => [25,25]
+# 33 => [25,5,1,1,1]
+
+RSpec.describe ChangeMachine do
+  describe '#change' do
+    it 'should return [1] when given 1' do
+      machine = ChangeMachine.new
+      result = machine.change(1)
+      expect(result).to eq([1])
+    end
+    it 'should return [1,1] when given 2' do
+      machine = ChangeMachine.new
+      result = machine.change(1)
+      expect(result).to eq([1,1])
+    end
+  end
+end
